@@ -7,20 +7,29 @@ print("********** Ch 3 Exercise 1 **********")
 print()
 print()
 
+import string
 
 var1 = "hi"
 var2 = "hello"
-var3 = "fhadhbvidfbwjevhfdbfjfv"
+var3 = "fhadhbvidfvdfgdfsfdfdfgbwjevhfdbfjfv fdagsdffgsdfgrndnrdgrnmasdfasfdjkcaeiufhbusvedbvnkjvfjd"
 
 def right_justify(input):
 
-    buffer = ""
+     
+    buffer[0] = ""
     counter = 0
-    while counter < (64 - len(input)):
-        buffer+=" "
-        counter+= 1
-    buffer+=input
-    print(buffer)
+    number = input.count(" ")
+    index = input.find(" ")
+
+    print(index)
+    if((index != -1) and (len(input) > 70)):
+        if index > 70:
+            buffer[0] = input[index:]
+            buffer[0] = input[:index]
+            
+
+
+    print(" " * (70 - len(input)) + input)
 
 right_justify(var1)
 right_justify(var2)
