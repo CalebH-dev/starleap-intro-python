@@ -1,0 +1,15 @@
+[config]
+git remote add upstream https://github.com/EmilyNeel/starleap-intro-python
+git remote -v
+git config pull.rebase true
+
+
+[normal]
+git checkout main
+git pull upstream main
+	if conflicts:
+	fix them then: git rebase --continue
+
+git push origin main --force-with-lease (to push changes to my fork)
+
+
