@@ -6,8 +6,26 @@ print("********** Ch 5 Exercise 1 **********")
 
 # Do your work for Exercise 1 here
 
-print("Ch 5 Exercise 1: Not implemented") # Delete this line when you write your code!
+import time
 
+def time_since_epoch():
+    long_time = time.time()
+    days = long_time // (3600*24)
+    hours = (long_time % (3600*24)) // 3600
+    minutes = (long_time % 3600) // 60
+    seconds = (long_time % minutes)
+    print("days: " + str(round(days)))
+    print("hours: " + str(round(hours)))
+    print("minutes: " + str(round(minutes)))
+    print("seconds: " + str(round(seconds)))
+
+    # check
+    # check = days*86400 + hours*3600 + minutes*60 #+ seconds
+    # print(long_time % check)
+    # print(check)
+
+
+time_since_epoch()
 
 
 print("********** Ch 5 Exercise 2 **********")
@@ -20,10 +38,13 @@ print("Ch 5 Exercise 2: Not implemented") # Delete this line when you write your
 
 print("********** Ch 5 Exercise 3 **********")
 
-# Do your work for Exercise 3 here.
+def recurse(n, s):
+    if n == 0:
+        print(s)
+    else:
+        recurse(n-1, n+s)
 
-print("Ch 5 Exercise 3: Not implemented") # Delete this line when you write your code!
-
+recurse(3, 0)
 
 
 print("********** Ch 5 Exercise 4 **********")

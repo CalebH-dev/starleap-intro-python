@@ -16,23 +16,28 @@ var3 = "fhadhbvidfvdfgdfsfdfdfgbwjevhfdbfjfv fdagsdffgsdfgrndnrdgrnmasdfasfdjkca
 def right_justify(input):
 
      
-    buffer[0] = ""
-    counter = 0
+    buffer = ["dsdakfhabhfkha", "asfj"]
     number = input.count(" ")
     index = input.find(" ")
 
     print(index)
     if((index != -1) and (len(input) > 70)):
-        if index > 70:
-            buffer[0] = input[index:]
-            buffer[0] = input[:index]
+        buffer[0] = input[index:]
+        buffer[1] = input[:index]
+        print(buffer)
+        
+    if index < 70 and len(input) > 70:
+        buffer[0] = input[index:]
+        buffer[1] = input[:index]
+        print(buffer)
+        
             
 
 
     print(" " * (70 - len(input)) + input)
 
-right_justify(var1)
-right_justify(var2)
+# right_justify(var1)
+# right_justify(var2)
 right_justify(var3)
 
 
