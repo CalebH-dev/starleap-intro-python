@@ -4,9 +4,32 @@
 
 print("********** Homework 1 Exercise 1 **********")
 
-# Do your work for Exercise 1 here
+def print_grid(h, w):
 
-print("Homework 1 Exercise 1: Not implemented") # Delete this line when you write your code!
+    line_char2 = "  |" * (w-1)
+    print(line_char2)
+    line = 0
+    for line in range(h):
+        if(line < h and line >= 0):
+            if(line % 2 == 0):
+                line_char1 = "----" * w
+                print(line_char1)
+            elif(line % 2 == 1):
+                line_char2 = "   |" * (w-1)
+                print(line_char2)
+        line += 1
+
+
+    line_char2 = "  |" * (w-1)
+    print(line_char2)
+
+
+Hight = input("Hight of tic-tac-toe: ")
+print(Hight)
+Width = input("Width of tic-tac-toe: ")
+print(Width)
+
+print_grid(int(Hight), int(Width))
 
 
 

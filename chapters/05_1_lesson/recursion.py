@@ -19,4 +19,4 @@ print("\nCountdown:")
 countdown(10)
 
 print("\nCountdown with details:")
-countdown(5, verbose=True)
+countdown(10, verbose=True)

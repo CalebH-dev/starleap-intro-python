@@ -30,9 +30,23 @@ time_since_epoch()
 
 print("********** Ch 5 Exercise 2 **********")
 
-# Do your work for Excercise 2 here.
+def fermat(a, b, c, n):
+    if n <= 2:
+        print("n !< 2")
+    else:
+        x = a**n + b**n
+        y = c**n
+        if x == y:
+            print("equal")
+        else:
+            print("not equal")
 
-print("Ch 5 Exercise 2: Not implemented") # Delete this line when you write your code!
+
+fermat(1, 2, 3, 3)
+        
+
+print("********** Ch 5 Exercise 3 **********")
+
 
 
 
@@ -44,7 +58,9 @@ def recurse(n, s):
     else:
         recurse(n-1, n+s)
 
+
 recurse(3, 0)
+recurse(4, 3)
 
 
 print("********** Ch 5 Exercise 4 **********")
