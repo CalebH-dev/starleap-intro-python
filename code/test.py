@@ -2,7 +2,10 @@ import string
 
 var1 = "hi"
 var2 = "hello"
-var3 = "Hello World several hundred times to make a very super long string that is longer than 70 but I doubled it in length to make it even longer than an insainly huge number! But nevertheless, thisstringisstillnotlongenoghorrepresentativeofallstrings so I continue to ramble in order to get more length."
+var3 = "Hello World several hundred times to make a very super long string \
+    that is longer than 70 but I doubled it in length to make it even longer than an \
+    insainly huge number! But nevertheless, thisstringisstillnotlongenoghorrepresentativeofallstrings \
+    so I continue to ramble in order to get more length."
 
 def right_justify_recursive(input, lin_len, count = 1):
 
@@ -83,9 +86,10 @@ def right_justify_loop(buff, lin_len, count = 1):
 
 
 # For parsing a file
-size = input("Enter max line length: ")
-file = input("Enter file to justify: ")
-size = int(size)
-f = open(file)
-file_contense = f.read()
-right_justify_loop(file_contense, size)
+# size = input("Enter max line length: ")
+# file = input("Enter file to justify: ")
+# size = int(size)
+# f = open(file)
+# file_contense = f.read()
+# right_justify_loop(file_contense, size)
+right_justify_loop(var3, 50)
