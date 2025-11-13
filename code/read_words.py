@@ -6,15 +6,12 @@ fin = '../shared/words.txt'
 f = open(fin)
 
 words = list()
-
 line = ' \n'
 
 while len(line) > 0:
-
     line = f.readline()
     line = line.strip()
     words.append(line)
-
 
 words = tuple(words)
 
@@ -22,7 +19,6 @@ words = tuple(words)
 def forbiden_letters(w, l):
 
     legal_words_count = 0
-    num = 0
     
     for word in w:
         if l in word:
@@ -30,7 +26,6 @@ def forbiden_letters(w, l):
 
         else:
             legal_words_count +=1
-        num +=1
 
     f.close()
 
@@ -44,14 +39,15 @@ for n in range(ord('a'), ord('z')+1):
 
 alpha = tuple(alpha)
 
+words_without_letter = list()
 
+i = 0
 for l in alpha:
-    
+    words_without_letter.append(forbiden_letters(words, l))
 
 
-    for each in alpha:
-        pass
-
+for n in range(len(alpha)):
+    print(f"{words_without_letter[n]} words that do not contain {alpha[n]}")
 
 
 
